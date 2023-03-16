@@ -13,7 +13,6 @@ export class ContactService {
 
   getContact(): Observable<IContacts> {
     return this.http.get<IContacts>('https://localhost:7196/contacts').pipe(
-      tap(data => console.log('All', JSON.stringify(data))),
       catchError(this.handleError)
     );
   }

@@ -10,7 +10,7 @@ import { ContactService } from "./contact.service";
   styleUrls: ['./contact-list.component.css']
 })
 export class ContacttListComponent implements OnInit, OnDestroy {
-  pageTitle: string = 'Contact List';
+  pageTitle: string = 'Contacts List';
   errorMessage: string = '';
   sub!: Subscription;
 
