@@ -1,0 +1,38 @@
+<div class='contacts'>
+  <div class='contacts-header'>
+    <h2>
+      {{pageTitle}}
+    </h2>
+  </div>
+  <div class='contacts-body'>
+    <div>
+      <p-table [value]="contacts" [tableStyle]="{'min-width': '70rem'}" *ngIf='contacts.length'>
+        <ng-template pTemplate="header">
+          <tr>
+            <th>First name</th>
+            <th>Surname</th>
+            <th>Address</th>
+            <th>Dob</th>
+            <th>Phone number</th>
+            <th>Iban</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-contact>
+          <tr>
+            <td>
+              <a class="nav-link" (click)="openProduct(contact)">
+                {{ contact.firstName }}
+              </a>
+            </td>
+            <td>{{ contact.surname }}</td>
+            <td>{{ contact.address }}</td>
+            <td>{{ contact.dob }}</td>
+            <td>{{ contact.phoneNumber }}</td>
+            <td>{{ contact.iban }}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+  </div>
+</div>

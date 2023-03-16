@@ -1,0 +1,8 @@
+.contact-table {
+  display: table;
+  width: 50%;
+}
+
+.input {
+  display: flex;
+}

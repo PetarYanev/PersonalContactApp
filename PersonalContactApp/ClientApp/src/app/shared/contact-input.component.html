@@ -1,0 +1,44 @@
+<div class="p-fluid grid">
+  <div class="field mx-2">
+    <span>
+      <label class="mt-2" for="inputtext">First name</label>
+      <input class="input" type="text" id="inputtext" pInputText [(ngModel)]="contact.firstName" />
+    </span>
+  </div>
+  <div class="field mx-2">
+    <span>
+      <label class="mt-2" for="inputtext">Surname</label>
+      <input class="input" type="text" id="inputtext" pInputText [(ngModel)]="contact.surname" />
+    </span>
+  </div>
+  <div class="field mx-2">
+    <span>
+      <label class="mt-2" for="inputtext">Address</label>
+      <input class="input" type="text" id="inputtext" pInputText [(ngModel)]="contact.address" />
+    </span>
+  </div>
+  <div class="field mx-2">
+    <span>
+      <label class="mt-2" for="calendar">Date of birth</label>
+      <p-calendar class="input" inputId="calendar" id="calendar" dataType="string" [(ngModel)]="contact.dob" dateFormat="yy-mm-dd"></p-calendar>
+    </span>
+  </div>
+  <div class="field mx-2">
+    <span>
+      <label class="mt-2" for="inputtext">Phone number</label>
+      <input class="input" type="text" id="inputtext" pInputText [(ngModel)]="contact.phoneNumber" />
+    </span>
+  </div>
+  <div class="field mx-2">
+    <span>
+      <label class="mt-2" for="inputtext">Iban</label>
+      <input class="input" type="text" id="inputtext" pInputText [(ngModel)]="contact.iban" />
+    </span>
+  </div>
+</div>
+<div class="field mx-2 mt-2">
+  <span>
+    <p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
+    <button (click)="confirm()" pButton icon="pi pi-check" label="Confirm"></button>
+  </span>
+</div>

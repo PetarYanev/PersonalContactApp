@@ -1,0 +1,10 @@
+<div class='card contact-table'>
+  <p-messages [(value)]="msgs"></p-messages>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <cm-contact-input [inputContact]="contact"
+                    (contactSave)="onContactSave($event)">
+  </cm-contact-input>
+</div>
+
